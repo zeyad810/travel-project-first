@@ -1,0 +1,165 @@
+/* ===== Trip Details Page — extends stylee.css ===== */
+
+.trip-hero{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/prymids.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.trip-hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 22, 0.55);
+}
+.trip-hero-overlay{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+.trip-hero-overlay h2{
+    font-size: 2.4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+.trip-hero-overlay h3{
+    font-size: 1.3em;
+    font-weight: 500;
+    color: cornflowerblue;
+    margin-bottom: 20px;
+}
+.badge{
+    display: inline-block;
+    background-color: cornflowerblue;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.5em 1.2em;
+    border-radius: 15px;
+}
+
+/* details layout */
+.trip-details{
+    width: 100%;
+    background-color: #fff;
+    padding: 90px 0;
+}
+.trip-container{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+.trip-main{
+    flex: 2;
+    min-width: 300px;
+}
+.trip-gallery img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+}
+.trip-desc{
+    line-height: 1.8em;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 1.05em;
+}
+.trip-list{
+    list-style: none;
+    margin-bottom: 40px;
+}
+.trip-list li{
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.05em;
+}
+.trip-list li i{
+    color: cornflowerblue;
+    margin-right: 10px;
+}
+
+/* sidebar */
+.trip-sidebar{
+    flex: 1;
+    min-width: 260px;
+}
+.price-card{
+    background-color: #000016;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    position: sticky;
+    top: 100px;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 25%);
+}
+.old-price{
+    text-decoration: line-through;
+    color: #8a8aa3;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+.new-price{
+    color: cornflowerblue;
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.new-price span{
+    color: aliceblue;
+    font-size: 0.5em;
+    font-weight: 400;
+}
+.trip-facts{
+    list-style: none;
+    margin-bottom: 25px;
+}
+.trip-facts li{
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.trip-facts li i{
+    color: cornflowerblue;
+    margin-right: 10px;
+    width: 18px;
+}
+.book-btn{
+    display: block;
+    text-align: center;
+    color: cornflowerblue;
+    background-color: blanchedalmond;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 0.9357em 1em;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    transition: 0.7s ease;
+}
+.book-btn:hover{
+    transform: scale(1.05);
+    background-color: burlywood;
+}
+
+/* responsive */
+@media (max-width: 768px){
+    .trip-container{
+        flex-direction: column;
+    }
+    .price-card{
+        position: static;
+    }
+}
